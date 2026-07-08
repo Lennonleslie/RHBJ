@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍶 醉仙居</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="header-ornament">◈ ◈ ◈</div>
+        <h1>醉仙居</h1>
+        <div class="sub">— 琼 浆 玉 液 · 岁 月 陈 香 —</div>
+        <div class="header-curtain">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <div class="stats-bar">
+        <span class="count">🍶 共 <em id="totalCount">0</em> 款 佳 酿</span>
+        <span class="hint" id="filterHint">· 点击卡片品鉴 ·</span>
+    </div>
+
+    <div class="card-grid" id="cardGrid" role="list"></div>
+
+    <!-- ===== 灯箱 ===== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="closeBtn" aria-label="关闭">✕</button>
+
+            <div class="lightbox-inner">
+                <!-- 左栏：图片 -->
+                <div class="lightbox-left">
+                    <div class="lightbox-image-wrapper" id="imageWrapper">
+                        <div class="lightbox-loader" id="lightboxLoader"></div>
+                        <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+                    </div>
+                    <div class="lightbox-gallery" id="lightboxGallery"></div>
+                    <div class="lightbox-custom" id="lightboxCustom">
+                        <img class="lightbox-custom-image" id="lightboxCustomImage" src="" alt="二维码" />
+                        <p class="lightbox-custom-text" id="lightboxCustomText"></p>
+                    </div>
+                </div>
+
+                <!-- 右栏：文本 -->
+                <div class="lightbox-right">
+                    <div class="lightbox-title" id="lightboxTitle"></div>
+                    <div class="lightbox-sub" id="lightboxSub"></div>
+                    <div class="lightbox-detail" id="lightboxDetail"></div>
+                    <div class="lightbox-info-section" id="lightboxSpecsWrap">
+                        <div class="info-label">📊 规格</div>
+                        <div class="info-content" id="lightboxSpecs"></div>
+                    </div>
+                    <div class="lightbox-info-section" id="lightboxAwardsWrap">
+                        <div class="info-label">🏆 荣誉</div>
+                        <div class="info-content" id="lightboxAwards"></div>
+                    </div>
+                    <div class="lightbox-info-section" id="lightboxServingWrap">
+                        <div class="info-label">🍷 品鉴建议</div>
+                        <div class="info-content" id="lightboxServing"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lightbox-controls">
+                <button class="lightbox-btn prev" id="prevBtn" aria-label="上一款">‹</button>
+                <span class="lightbox-counter" id="lightboxCounter">1 / 1</span>
+                <button class="lightbox-btn next" id="nextBtn" aria-label="下一款">›</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部菜单 -->
+    <nav class="bottom-menu" id="bottomMenu" aria-label="酒品分类">
+        <button class="menu-btn all-btn active" data-filter="all" id="filterAll">
+            <span class="icon">☯</span> 全部
+        </button>
+        <span class="menu-divider"></span>
+        <button class="menu-btn" data-filter="酱香" id="filterJiang">
+            <span class="icon">🍂</span> 酱香 <span class="badge">· 醇厚</span>
+        </button>
+        <button class="menu-btn" data-filter="浓香" id="filterNong">
+            <span class="icon">🌾</span> 浓香 <span class="badge">· 馥郁</span>
+        </button>
+        <button class="menu-btn" data-filter="清香" id="filterQing">
+            <span class="icon">🍃</span> 清香 <span class="badge">· 雅致</span>
+        </button>
+    </nav>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/cardRenderer.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
