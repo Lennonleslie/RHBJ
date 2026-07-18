@@ -286,7 +286,7 @@ body {
 }
 
 /* ================================================================
-   卡片底部 — 两行标签
+卡片底部 — 两行标签
    ================================================================ */
 .card-footer {
     margin-top: 12px;
@@ -462,6 +462,12 @@ body {
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid rgba(212, 164, 80, 0.08);
+    /* 改用背景图 */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 设置最小高度 */
+    min-height: 300px;
 }
 
 .lightbox-image {
@@ -469,6 +475,7 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -877,17 +884,19 @@ body {
     }
 
     .lightbox-image-wrapper {
-        min-height: 180px;
-        max-height: 38vh;
+        min-height: 350px;
+        max-height: 50vh;
     }
 
     .lightbox-right {
+        margin-top: 50px;
         max-height: 40vh;
         overflow-y: auto;
     }
 
     .lightbox-content {
         padding: 16px 18px 14px;
+        min-height: 90vh;
         max-height: 94vh;
     }
 
@@ -944,11 +953,12 @@ body {
     }
 
     .lightbox-image-wrapper {
-        min-height: 120px;
+        min-height: 300px;
         max-height: 30vh;
     }
 
     .lightbox-right {
+        margin-top: 80px;
         max-height: 38vh;
         gap: 4px;
     }

@@ -1,5 +1,5 @@
 // ================================================================
-//  main.js - 灯箱主逻辑（修复版，无占位图污染）
+//  main.js - 灯箱主逻辑（使用背景图方式）
 // ================================================================
 
 let currentFilter = 'all';
@@ -12,7 +12,7 @@ let filteredData = [...wineData];
 const totalCount = document.getElementById('totalCount');
 const filterHint = document.getElementById('filterHint');
 const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightboxImage');
+const imageWrapper = document.getElementById('imageWrapper');
 const lightboxLoader = document.getElementById('lightboxLoader');
 const lightboxGallery = document.getElementById('lightboxGallery');
 const lightboxTitle = document.getElementById('lightboxTitle');
@@ -35,7 +35,7 @@ const filterQing = document.getElementById('filterQing');
 // ---------- 获取图片列表 ----------
 function getImageList(item) {
     const list = [];
-    // ★ 第一张必须是 largeImage
+    // 第一张必须是 largeImage
     if (item.largeImage) {
         list.push(item.largeImage);
     }
@@ -45,7 +45,7 @@ function getImageList(item) {
             if (url && !list.includes(url)) list.push(url);
         });
     }
-    // 如果仍然没有图片，使用 image 作为兜底（但会打印警告）
+    // 如果仍然没有图片，使用 image 作为兜底
     if (list.length === 0 && item.image) {
         console.warn(`⚠️ ${item.name} 没有配置 largeImage，使用 image 作为主图`);
         list.push(item.image);
@@ -53,7 +53,7 @@ function getImageList(item) {
     return list;
 }
 
-// ---------- 加载灯箱图片（不做任何降级替换） ----------
+// ---------- 加载灯箱图片（使用背景图） ----------
 function loadLightboxImage(wineIdx, imgIdx) {
     const item = filteredData[wineIdx];
     if (!item) {
@@ -64,49 +64,42 @@ function loadLightboxImage(wineIdx, imgIdx) {
     const images = getImageList(item);
     if (!images.length) {
         console.error(`❌ ${item.name} 没有任何图片配置`);
+        imageWrapper.style.backgroundImage = 'none';
+        imageWrapper.classList.add('error');
         return;
     }
 
     currentImageIndex = Math.min(imgIdx, images.length - 1);
     const url = images[currentImageIndex];
 
-    // ★ 调试日志：查看实际加载的 URL
     console.log(`📸 [${item.name}] 加载图片 #${currentImageIndex + 1}: ${url}`);
 
+    // 显示加载动画
     lightboxLoader.classList.add('show');
-    lightboxImage.classList.remove('loaded');
-    lightboxImage.classList.add('loading');
+    imageWrapper.classList.remove('loaded', 'error');
 
+    // 使用 Image 对象预加载
     const img = new Image();
     img.crossOrigin = 'anonymous';
 
     img.onload = function () {
-        lightboxImage.src = url;
-        lightboxImage.classList.remove('loading');
-        lightboxImage.classList.add('loaded');
+        // 设置背景图
+        imageWrapper.style.backgroundImage = `url(${url})`;
+        imageWrapper.classList.add('loaded');
+        imageWrapper.classList.remove('error');
         lightboxLoader.classList.remove('show');
         console.log(`✅ [${item.name}] 图片加载成功`);
     };
 
     img.onerror = function () {
-        // ★ 不再使用缩略图作为降级，而是显示错误状态
         console.error(`❌ [${item.name}] 图片加载失败: ${url}`);
-        lightboxImage.src = '';
-        lightboxImage.classList.remove('loading');
-        lightboxImage.classList.add('loaded');
+        imageWrapper.style.backgroundImage = 'none';
+        imageWrapper.classList.add('error');
+        imageWrapper.classList.remove('loaded');
         lightboxLoader.classList.remove('show');
-        // 在图片位置显示错误提示
-        lightboxImage.alt = '图片加载失败';
-        // 可以用一个错误占位（但不用缩略图）
-        lightboxImage.style.background = '#2a1c14';
-        lightboxImage.style.display = 'flex';
-        lightboxImage.style.alignItems = 'center';
-        lightboxImage.style.justifyContent = 'center';
-        lightboxImage.style.color = 'rgba(245,239,230,0.2)';
-        lightboxImage.style.fontSize = '1.2rem';
-        lightboxImage.setAttribute('data-error', 'true');
     };
 
+    // 开始加载
     img.src = url;
 }
 
@@ -125,6 +118,8 @@ function renderGallery(item, activeIdx) {
                 </div>`;
     });
     lightboxGallery.innerHTML = html;
+    
+    // 绑定点击事件
     lightboxGallery.querySelectorAll('.gallery-thumb').forEach(el => {
         el.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -208,9 +203,9 @@ function closeLightbox() {
     lightbox.classList.remove('active');
     setTimeout(() => {
         if (!isLightboxOpen) {
-            lightboxImage.src = '';
-            lightboxImage.classList.remove('loaded');
-            lightboxImage.classList.add('loading');
+            // 清空背景图
+            imageWrapper.style.backgroundImage = 'none';
+            imageWrapper.classList.remove('loaded', 'error');
             lightboxGallery.innerHTML = '';
         }
     }, 300);
@@ -257,7 +252,7 @@ function goNextWine() {
 }
 
 // ---------- 主图点击切换画廊（左/右半区） ----------
-lightboxImage.addEventListener('click', function (e) {
+imageWrapper.addEventListener('click', function (e) {
     if (!isLightboxOpen) return;
     const rect = this.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
@@ -267,11 +262,11 @@ lightboxImage.addEventListener('click', function (e) {
 
 // 触摸滑动切换画廊图片
 let touchStartX = 0;
-lightboxImage.addEventListener('touchstart', function (e) {
+imageWrapper.addEventListener('touchstart', function (e) {
     touchStartX = e.changedTouches[0].screenX;
 }, { passive: true });
 
-lightboxImage.addEventListener('touchend', function (e) {
+imageWrapper.addEventListener('touchend', function (e) {
     if (!isLightboxOpen) return;
     const diff = touchStartX - e.changedTouches[0].screenX;
     if (Math.abs(diff) > 30) {
@@ -331,5 +326,4 @@ document.addEventListener('keydown', function (e) {
 // ---------- 初始化 ----------
 setFilter('all');
 console.log('🍶 醉仙居已启动');
-console.log('📸 灯箱图片加载日志：');
-console.log('   如果看到 ❌ 错误，请检查 data.js 中的图片路径');
+console.log('📸 使用背景图方式加载图片');

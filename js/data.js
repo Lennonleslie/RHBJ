@@ -2,7 +2,9 @@
 //  data.js - 酒品数据（请替换为您的真实图片路径）
 // ================================================================
 
-const wineData = [{
+const wineData = [
+/*
+{
     // ==========================================================
     //  ★★★ 模板案例：飞天茅台（完整配置，含所有字段） ★★★
     //  新增酒品时，复制此结构，按需填写或删除字段即可
@@ -67,7 +69,8 @@ const wineData = [{
         // image: './images/wxlogo.jpg',
         text: '扫码添加微信 · 了解更多酱香故事'
     }
-}, {
+},
+{
     name: '茅台',
     sub: '· 子鼠',
     origin: '贵州茅台镇',
@@ -94,31 +97,958 @@ const wineData = [{
         image: './images/qrcode_maotai.png',
         text: '扫码添加微信 · 了解更多酱香故事'
     }
-}, {
-    name: '茅台',
-    sub: '· 丑牛',
-    origin: '贵州茅台镇',
-    description: '酱香典范，空杯留香。历经岁月沉淀，酒体醇厚丰满，回味悠长。',
+},
+*/
+{name: '飞天茅台',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1200',
     types: ['酱香'],
-    tags: ['陈年', '纯粮', '限量'],
+    tags: [''],
     year: '',
-    image: './images/mt02cn.jpg',
-    largeImage: './images/mt02cn.jpg',
-    detail: '飞天茅台酒是茅台酒中的经典之作，采用传统大曲酱香工艺，历经九次蒸煮、八次发酵、七次取酒，陶坛陈酿多年。酒体微黄透明，酱香突出，幽雅细腻，酒体醇厚，回味悠长，空杯留香持久。被誉为中国白酒的"国酒"代表。',
+    image: './images_a/飞天茅台.png',
+    largeimage: './images_a/飞天茅台.png',
+    detail: '',
     gallery: [
         './images/wxQRcode.jpg',
+        './images_a/飞天茅台.png',
     ],
     specs: {
-        alcohol: '53%vol',
-        volume: '500ml',
-        ingredients: '高粱、小麦、水',
-        type: '酱香型',
-        standard: 'GB/T 18356'
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
     },
-    awards: '1915年巴拿马万国博览会金奖；中国名酒；国家非物质文化遗产',
-    serving: '适宜温度：20~25℃；建议使用小杯慢品，先闻香，再入口，酒液在口中停留3-5秒，感受酱香层次。配餐建议：红烧肉、酱鸭、海鲜。',
+    awards: '',
+    serving: '',
     custom: {
-        image: './images/qrcode_maotai.png',
+        image: './images/wxQRcode.jpg',
         text: '扫码添加微信 · 了解更多酱香故事'
     }
-},];
+},
+{name: '茅台1935',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1000',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台1935.png',
+    largeimage: './images_a/茅台1935.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台1935.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台金王子',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:680',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台金王子.png',
+    largeimage: './images_a/茅台金王子.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台金王子.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '酱香经典王子',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:680',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/酱香经典王子.png',
+    largeimage: './images_a/酱香经典王子.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/酱香经典王子.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台四大金刚',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台四大金刚.png',
+    largeimage: './images_a/茅台四大金刚.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台四大金刚.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台15年',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台15年.png',
+    largeimage: './images_a/茅台15年.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台15年.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台30年',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台30年.png',
+    largeimage: './images_a/茅台30年.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台30年.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台50年',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:3000',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台50年.png',
+    largeimage: './images_a/茅台50年.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台50年.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '燕京八景',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:800',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/燕京八景.png',
+    largeimage: './images_a/燕京八景.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/燕京八景.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '出口茅台',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/出口茅台.png',
+    largeimage: './images_a/出口茅台.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/出口茅台.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '公斤茅台',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1280',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/公斤茅台.png',
+    largeimage: './images_a/公斤茅台.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/公斤茅台.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '习酒1988',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:800',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/习酒1988.png',
+    largeimage: './images_a/习酒1988.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/习酒1988.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '习酒君品',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/习酒君品.png',
+    largeimage: './images_a/习酒君品.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/习酒君品.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '五粮液1618',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1000',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/五粮液1618.png',
+    largeimage: './images_a/五粮液1618.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/五粮液1618.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '五粮液八代',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:800',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/五粮液八代.png',
+    largeimage: './images_a/五粮液八代.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/五粮液八代.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '国窖1573',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:780',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/国窖1573.png',
+    largeimage: './images_a/国窖1573.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/国窖1573.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '剑南春',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:680',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/剑南春.png',
+    largeimage: './images_a/剑南春.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/剑南春.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台彩釉珍品',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1200',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台彩釉珍品.png',
+    largeimage: './images_a/茅台彩釉珍品.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台彩釉珍品.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台珍品',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:1200',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台珍品.png',
+    largeimage: './images_a/茅台珍品.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台珍品.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台迎宾_紫',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:600',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台迎宾_紫.png',
+    largeimage: './images_a/茅台迎宾_紫.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台迎宾_紫.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '茅台迎宾_红',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:600',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/茅台迎宾_红.png',
+    largeimage: './images_a/茅台迎宾_红.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/茅台迎宾_红.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_鼠',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_鼠.png',
+    largeimage: './images_a/12生肖_鼠.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_鼠.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_牛',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_牛.png',
+    largeimage: './images_a/12生肖_牛.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_牛.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_虎',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_虎.png',
+    largeimage: './images_a/12生肖_虎.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_虎.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_兔',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_兔.png',
+    largeimage: './images_a/12生肖_兔.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_兔.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_龙',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_龙.png',
+    largeimage: './images_a/12生肖_龙.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_龙.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_蛇',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_蛇.png',
+    largeimage: './images_a/12生肖_蛇.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_蛇.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_马',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_马.png',
+    largeimage: './images_a/12生肖_马.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_马.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_羊',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_羊.png',
+    largeimage: './images_a/12生肖_羊.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_羊.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_猴',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_猴.png',
+    largeimage: './images_a/12生肖_猴.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_猴.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_鸡',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_鸡.png',
+    largeimage: './images_a/12生肖_鸡.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_鸡.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_狗',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_狗.png',
+    largeimage: './images_a/12生肖_狗.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_狗.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖_猪',
+    sub: '',
+    origin: '规格:6瓶装/每件',
+    description: '一手货源价格:2500',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖_猪.png',
+    largeimage: './images_a/12生肖_猪.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖_猪.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+{name: '12生肖全家福',
+    sub: '',
+    origin: '规格:12瓶一件（12生肖各一瓶）',
+    description: '一手货源价格:6800',
+    types: ['酱香'],
+    tags: [''],
+    year: '',
+    image: './images_a/12生肖全家福.png',
+    largeimage: './images_a/12生肖全家福.png',
+    detail: '',
+    gallery: [
+        './images/wxQRcode.jpg',
+        './images_a/12生肖全家福.png',
+    ],
+    specs: {
+        alcohol: '',
+        volume: '',
+        ingredients: '',
+        type: '',
+        standard: ''
+    },
+    awards: '',
+    serving: '',
+    custom: {
+        image: './images/wxQRcode.jpg',
+        text: '扫码添加微信 · 了解更多酱香故事'
+    }
+},
+];
