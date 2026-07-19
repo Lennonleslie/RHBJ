@@ -925,6 +925,11 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .count{
+        display: none;
+    }
+
     .card-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 12px;
@@ -1019,6 +1024,7 @@ body {
     .lightbox-counter {
         font-size: 0.65rem;
         min-width: 44px;
+        /* display: none; */
     }
 
     .lightbox-close {
